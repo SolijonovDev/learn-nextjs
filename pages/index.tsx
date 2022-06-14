@@ -1,10 +1,16 @@
+import Head from "next/head";
 
 
-const Home=():JSX.Element=>{
+const Home = (): JSX.Element => {
     return (
-        <div>
-            <h1>Home page</h1>
-        </div>
+        <>
+            <Head>
+                <title>Home page</title>
+            </Head>
+            <div>
+                <h1>Home page</h1>
+            </div>
+        </>
     );
 };
 

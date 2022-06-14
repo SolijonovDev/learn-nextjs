@@ -1,8 +1,12 @@
-### Learn Nextjs
 
 
-# Nextjs
-# TypeScript
-# Reactjs
+# Learn Nextjs
+
+
+
+
+### Nextjs
+### TypeScript
+### Reactjs
 
 
