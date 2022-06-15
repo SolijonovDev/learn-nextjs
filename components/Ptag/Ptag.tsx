@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IPtag } from "./ptag.type";
+import { IPtag } from "./Ptag.type";
 import styles from './ptag.module.scss';
 import cn from 'classnames';
 

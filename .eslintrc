@@ -2,10 +2,13 @@
 	"root": true,
 	"parser": "@typescript-eslint/parser",
 	"plugins": [
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"react-hooks"
 	],
 	"rules": {
 		"semi": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
 		"@typescript-eslint/semi": [
 			"warn"
 		],
@@ -20,6 +23,8 @@
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
 		"plugin:react-hooks/recommended"
+
 	]
 }

@@ -1,11 +1,12 @@
 
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import styles from './tag.module.scss';
 import { ITag } from './tag.type';
 import cn from "classnames";
 
 
 export const Tag: FC<ITag> = ({ children, size = "m", color = "ghost", href, className, ...props }) => {
+  
     return (
         <div
             className={
