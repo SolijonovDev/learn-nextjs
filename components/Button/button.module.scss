@@ -1,0 +1,33 @@
+.button{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    padding: 8px 16px;
+    min-width: 80px;
+    transition: all 500ms ease;
+    border-radius: 4px;
+    margin: 20px;
+
+}
+
+.primary{
+    color:#fff;
+    background-color: blue;
+    border:1px solid blue;
+    &:hover{
+        color: blue;
+        background-color: #fff;
+    }
+}
+
+.ghost{
+    color:red;
+    background-color: darkgray;
+    border:1px solid red;
+    &:hover{
+        background-color: red;
+        color:darkgray;
+    }
+}
