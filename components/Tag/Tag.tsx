@@ -1,4 +1,3 @@
-
 import { FC, useEffect } from 'react';
 import styles from './tag.module.scss';
 import { ITag } from './tag.type';
