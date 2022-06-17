@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { Htag } from "../../components/Htag/Htag";
 import { withLayout } from "../../Layout/Layout";
 
 interface IPost {
@@ -14,7 +15,7 @@ interface IPosts {
 const Posts: NextPage<IPosts> = ({ data }):JSX.Element => {
     return (
         <div>
-            <h1>Posts page</h1>
+            <Htag tag="h1">Posts page</Htag>
             <ul>
                 {data.map(v=>(
                     <li key={v.id}>{v.id} userId: {v.userId}, title: {v.title} </li>

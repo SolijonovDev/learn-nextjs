@@ -1,4 +1,5 @@
 import { GetStaticPropsContext, NextPage } from "next";
+import { Htag } from "../../components/Htag/Htag";
 import { withLayout } from "../../Layout/Layout";
 
 interface dataType {
@@ -14,7 +15,7 @@ interface IUsers {
 const Users: NextPage<IUsers> = ({ data }): JSX.Element => {
     return (
         <div>
-            <h1>User page</h1>
+            <Htag tag="h1">User page</Htag>
             <ul>
                 {
                     data.map(v => (

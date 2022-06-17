@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import { FunctionComponent } from "react";
 import { ILayout } from "./Layout.type";
-import Link from 'next/link';
 import styles from './layout.module.scss';
+import { A } from "../components/A/A";
+import { Ptag } from "../components/Ptag/Ptag";
 
 
 const Layout: NextPage<ILayout> = ({ children }) => {
@@ -10,16 +10,17 @@ const Layout: NextPage<ILayout> = ({ children }) => {
         <div className={styles.layout}>
             <header>
                 <nav className={styles.nav}>
-                    <Link href={"/users"}>Users</Link>
-                    <Link href={"/blogs"}>Blogs</Link>
-                    <Link href={"/posts"}>Posts</Link>
+                    <A href={"/"}>Home</A>
+                    <A href={"/users"}>Users</A>
+                    <A href={"/blogs"}>Blogs</A>
+                    <A href={"/posts"}>Posts</A>
                 </nav>
             </header>
             <div className={styles.main}>
                 {children}
             </div>
             <footer className={styles.footer}>
-                <p>footer</p>
+                <Ptag size="l">footer</Ptag>
             </footer>
         </div>
     );

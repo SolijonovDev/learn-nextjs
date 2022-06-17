@@ -1,5 +1,6 @@
 import { NextPage } from "next";
-import Link from "next/link";
+import { A } from "../../components/A/A";
+import { Htag } from "../../components/Htag/Htag";
 import { withLayout } from "../../Layout/Layout";
 
 export type blogType={
@@ -14,14 +15,14 @@ type BlogsType={
 const Blogs: NextPage<BlogsType> = ({data}) => {
     return (
         <div>
-            <h1>blogs page</h1>
+            <Htag tag="h1">blogs page</Htag>
             <ul>
                 {
                data.map(v=>(
                 <li key={v.userId+v.title}>
-                    <Link href={`/blogs/${v.userId}`}>
-                     <a>{v.userId} {v.title}</a>
-                    </Link>
+                    <A href={`/blogs/${v.userId}`}>
+                     {v.userId} {v.title}
+                    </A>
                 </li>
                ))
                 }
