@@ -32,14 +32,17 @@ a {
 	padding: 0 15px;
 }
 
-
-nav{
+nav {
 	display: flex;
 	justify-content: space-around;
+
 	padding: 15px 0;
+
 	background-color: darkgray;
-	a{
-		color:#fff;
+
+	a {
 		text-decoration: none;
+
+		color: #FFF;
 	}
 }

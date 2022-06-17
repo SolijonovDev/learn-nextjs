@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { withLayout } from "../../Layout/Layout";
 
 interface IPost {
     id: number;
@@ -10,7 +11,7 @@ interface IPosts {
     data: IPost[];
 }
 
-const Posts: NextPage<IPosts> = ({ data }) => {
+const Posts: NextPage<IPosts> = ({ data }):JSX.Element => {
     return (
         <div>
             <h1>Posts page</h1>
@@ -38,4 +39,4 @@ export async function getStaticProps(context) {
 
 
 
-export default Posts;
+export default withLayout(Posts);

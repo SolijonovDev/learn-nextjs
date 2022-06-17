@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Link from "next/link";
+import { withLayout } from "../../Layout/Layout";
 
 export type blogType={
     userId:number | string;
@@ -33,7 +34,6 @@ const url = "https://jsonplaceholder.typicode.com/todos";
 
 
 export async function getStaticProps() {
-
     const res = await fetch(url);
     const data = await res.json();
     return {
@@ -45,4 +45,4 @@ export async function getStaticProps() {
 
 
 
-export default Blogs;
+export default withLayout(Blogs);

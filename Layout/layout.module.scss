@@ -1,0 +1,33 @@
+.layout {
+	max-width: 1000px;
+	margin: 0 auto;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		padding: 15px 0;
+
+		a {
+			text-decoration: none;
+
+			color: #FFF;
+
+			font-size: 16px;
+		}
+	}
+
+	.main {
+		min-height: calc(100vh - 160px);
+	}
+
+	.footer {
+		height: 80px;
+
+		color: #FFF;
+        background-color: darkgray;
+        padding: 15px 0;
+        text-align: center;
+	}
+}

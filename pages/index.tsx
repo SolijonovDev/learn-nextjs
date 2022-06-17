@@ -7,6 +7,7 @@ import { Htag } from "../components/Htag/Htag";
 import { Ptag } from "../components/Ptag/Ptag";
 import { Rating } from "../components/Rating/Rating";
 import { Tag } from "../components/Tag/Tag";
+import { withLayout } from "../Layout/Layout";
 
 
 const Home = (): JSX.Element => {
@@ -45,4 +46,4 @@ const Home = (): JSX.Element => {
     );
 };
 
-export default Home;
+export default withLayout(Home);
