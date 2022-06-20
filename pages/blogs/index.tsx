@@ -1,32 +1,32 @@
-import { NextPage } from "next";
+import axios from "axios";
+import { GetStaticProps, NextPage } from "next";
 import { A } from "../../components/A/A";
 import { Htag } from "../../components/Htag/Htag";
+import { IBlogItem } from "../../interface/blog.type";
 import { withLayout } from "../../Layout/Layout";
 
-export type blogType={
-    userId:number | string;
-    title:string;
+
+type BlogsType = {
+    data: IBlogItem[]
 };
 
-type BlogsType={
-    data:blogType[]
-};
-
-const Blogs: NextPage<BlogsType> = ({data}) => {
+const Blogs: NextPage<BlogsType> = ({ data }) => {
+    console.log(process.env.NEXT_PUBLIC_DOMAIN);
+    console.log(process.env.NODE_ENV);
     return (
         <div>
             <Htag tag="h1">blogs page</Htag>
             <ul>
                 {
-               data.map(v=>(
-                <li key={v.userId+v.title}>
-                    <A href={`/blogs/${v.userId}`}>
-                     {v.userId} {v.title}
-                    </A>
-                </li>
-               ))
+                    data.map(v => (
+                        <li key={v.userId + v.title}>
+                            <A href={`/blogs/${v.userId}`}>
+                                {v.userId} {v.title}
+                            </A>
+                        </li>
+                    ))
                 }
-                </ul>
+            </ul>
         </div>
     );
 };
@@ -34,16 +34,14 @@ const Blogs: NextPage<BlogsType> = ({data}) => {
 const url = "https://jsonplaceholder.typicode.com/todos";
 
 
-export async function getStaticProps() {
-    const res = await fetch(url);
-    const data = await res.json();
+export const getStaticProps: GetStaticProps = async () => {
+    const {data} = await axios.get<IBlogItem[]>(url);
     return {
         props: {
             data
         },
     };
-}
-
+};
 
 
 export default withLayout(Blogs);

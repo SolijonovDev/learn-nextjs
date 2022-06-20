@@ -11,6 +11,7 @@
     "stylelint": "stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "next": "12.1.0",
     "react": "17.0.2",

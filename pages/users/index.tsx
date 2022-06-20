@@ -12,6 +12,8 @@ interface IUsers {
     data: dataType[]
 }
 
+
+
 const Users: NextPage<IUsers> = ({ data }): JSX.Element => {
     return (
         <div>
@@ -31,7 +33,7 @@ const url = "https://jsonplaceholder.typicode.com/users";
 
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-    console.log(context);
+    console.log("userpage",context);
     const res = await fetch(url);
     const data = await res.json();
     return {
