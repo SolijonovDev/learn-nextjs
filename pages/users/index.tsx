@@ -1,4 +1,5 @@
 import { GetStaticPropsContext, NextPage } from "next";
+import { A } from "../../components/A/A";
 import { Htag } from "../../components/Htag/Htag";
 import { withLayout } from "../../Layout/Layout";
 
@@ -21,7 +22,7 @@ const Users: NextPage<IUsers> = ({ data }): JSX.Element => {
             <ul>
                 {
                     data.map(v => (
-                        <li key={v.id + v.username}>id: {v.id}, Name: {v.name}, username: {v.username}</li>
+                        <li key={v.id + v.username}><A href={"/users/"+v.id}>id: {v.id}, Name: {v.name}, username: {v.username}</A></li>
                     ))
                 }
             </ul>
