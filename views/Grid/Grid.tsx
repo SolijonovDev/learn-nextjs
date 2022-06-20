@@ -1,4 +1,4 @@
-import { Htag } from "../../components/Htag/Htag"
+import { Htag } from "../../components/Htag/Htag";
 import styles from './grid.module.scss';
 
 
