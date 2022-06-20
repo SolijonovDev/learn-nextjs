@@ -30,7 +30,7 @@ export const Rating: FC<IRating> = ({ rating, isEditable, setRating }): JSX.Elem
         updateRating(num);
     };
     return (
-        <div className={styles.rating}>
+        <div className={styles.rating} tabIndex={10}>
             {elements.map((v, i) => <span
                 className={cn(styles.star,{
                   [styles.iditable]:isEditable
@@ -38,7 +38,7 @@ export const Rating: FC<IRating> = ({ rating, isEditable, setRating }): JSX.Elem
                 onMouseEnter={() => changeRating(i + 1)}
                 onMouseLeave={() => changeRating(rating)}
                 onClick={() => setRating(i + 1)}
-                key={i}>{v}</span>)}
+                key={i} tabIndex={1}>{v}</span>)}
         </div>
     );
 };
